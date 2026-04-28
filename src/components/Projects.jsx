@@ -226,7 +226,7 @@ const PortfolioProjects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-96 object-cover"
+                        className="w-full h-[340px] object-cover object-top"
                       />
                     </div>
                   </div>
@@ -239,7 +239,7 @@ const PortfolioProjects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-96 object-cover"
+                        className="w-full h-[340px] object-cover object-top"
                       />
                     </div>
                   </div>

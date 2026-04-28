@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
-import myImage from "../assets/moi.png";
+import myImage from "../assets/moi.jpeg";
 import cvFile from "../assets/CV_Salim_Haytem.pdf";
 
 const Hero = () => {
@@ -90,7 +90,7 @@ const Hero = () => {
             <img
               src={myImage}
               alt="Salim Haytem"
-              className="relative rounded-3xl shadow-2xl w-full max-w-md lg:max-w-lg object-cover"
+              className="relative rounded-3xl shadow-2xl w-[380px] h-[480px] object-cover object-top"
             />
           </div>
         </div>
