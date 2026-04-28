@@ -4,24 +4,18 @@ const Navbar = () => {
   const [show, setShow] = useState(false); // cachée au départ
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    // si l'utilisateur descend -> cacher
-    if (window.scrollY > lastScrollY) {
-      setShow(false);
-    } 
-    // si l'utilisateur monte -> afficher
-    else if (window.scrollY < lastScrollY && window.scrollY > 100) {
-      setShow(true);
-    } 
-    // si on est tout en haut -> cacher
-    else if (window.scrollY <= 100) {
-      setShow(false);
-    }
-
-    setLastScrollY(window.scrollY);
-  };
-
   useEffect(() => {
+    const controlNavbar = () => {
+      if (window.scrollY > lastScrollY) {
+        setShow(false);
+      } else if (window.scrollY < lastScrollY && window.scrollY > 100) {
+        setShow(true);
+      } else if (window.scrollY <= 100) {
+        setShow(false);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
     window.addEventListener("scroll", controlNavbar);
     return () => window.removeEventListener("scroll", controlNavbar);
   }, [lastScrollY]);
